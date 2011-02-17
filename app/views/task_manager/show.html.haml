@@ -1,0 +1,18 @@
+#task_manager
+  - @tasks = @person.tasks
+  .person
+    .details 
+      .name
+        = @person.name
+        = link_to("powrot", task_manager_index_path)
+      .person_img= show_img @person.img_name
+    .controlls
+      .less_tasks_form
+        = link_to "mniej", task_manager_index_path
+    .tasks
+      - @tasks.each do |task|
+        -@task = task
+        = render :partial => 'task'
+      .clearfix
+    .clearfix
+  .clearfix

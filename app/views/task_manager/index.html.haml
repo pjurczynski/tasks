@@ -1,0 +1,40 @@
+#task_manager
+  -if flash[:notice]
+    .notice
+      = flash[:notice]
+  -@people.each do |person|
+
+    .person 
+
+      .details 
+        .name= person.name
+        - if Task.where( "person_id = ? AND date_finish != ''", person.id ).present? 
+          .controlls= link_to "Przejdz do Archiwum", archive_task_manager_path( person.id )
+
+        .person_img= show_img person.img_name
+
+      .controlls
+        - person_all_tasks_count = Task.all( :conditions => { :person_id => person.id, :active => true }).size
+
+        .add_task_form
+          - @task = Task.new
+          = link_to "Dodaj", new_task_path( :person_id => person.id )
+          /new_task_manager_path( :person_id => person.id ) 
+
+        - if person.tasks.size > 4
+          .more_tasks_form
+            = link_to "wiecej", task_manager_path(person.id)
+
+      /person tasks show only first 4
+      .tasks
+        - person.tasks[0..3].each do |task|
+          - @task = task
+          = render :partial => 'task'
+
+        .clearfix
+          /task clearfix
+      .clearfix
+        /tasks clearfix
+    .clearfix
+      /person clearfix
+= link_to :dodaj_osobe, new_person_path

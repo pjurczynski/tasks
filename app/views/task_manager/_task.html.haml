@@ -1,0 +1,10 @@
+.task{ :id => 'task_id_' + @task.id.to_s}
+  .task_date_start= @task.date_start
+  .task_desc= @task.desc
+  .controlls
+    .task_form
+      - task_id = @task.id
+      = link_to "Edytuj", edit_task_manager_path(task_id), :class => "task_edit"
+      = link_to "Zakoncz", finish_task_manager_path(task_id), :method => :put, :class => "task_finish"
+.separator
+

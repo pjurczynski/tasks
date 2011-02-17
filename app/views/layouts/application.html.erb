@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CkTask</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body class="<%= controller.controller_name %> <%= controller.action_name %>">
+
+  <div id="content">
+    <%= yield %>
+  </div>
+
+</body>
+</html>

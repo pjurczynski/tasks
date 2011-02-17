@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Nathan Smith" />
+<meta name="copyright" content="Licensed under GPL and MIT." />
+<meta name="description" content="The 960 Grid System is an effort to streamline web development workflow." />
+<meta name="robots" content="all" />
+<title>960 Grid System</title>
+<link rel="stylesheet" href="css/master.css" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" href="css/ie.css" />
+<![endif]-->
+</head>
+<body>
+<div class="container_12">
+	<h1 class="grid_4 push_4">
+		960 Grid System
+	</h1>
+	<!-- end .grid_4.push_4 -->
+	<p id="description" class="grid_4 pull_4">
+		<a href="http://github.com/nathansmith/960-Grid-System/zipball/master">Download</a> - Templates: Acorn, Fireworks, Flash, InDesign, GIMP, Inkscape, Illustrator, OmniGraffle, Photoshop, Visio, Exp&nbsp;Design. Also: PDF sketch sheets + CSS files. Repository at <a href="http://github.com/nathansmith/960-grid-system/">GitHub</a>.
+	</p>
+	<!-- end #description.grid_4.pull_4 -->
+	<hr />
+	<div class="grid_4">
+		<p>
+			<a href="http://www.spry-soft.com/grids/" class="tool_link"><img src="img/tool_css.gif" alt="Custom CSS Generator" width="300" height="40" /></a>
+		</p>
+	</div>
+	<!-- end .grid_4 -->
+	<div class="grid_4">
+		<p>
+			<a href="http://960ls.atomidata.com/" class="tool_link"><img src="img/tool_html.gif" alt="HTML Layout Generator" width="300" height="40" /></a>
+		</p>
+	</div>
+	<!-- end .grid_4 -->
+	<div class="grid_4">
+		<p>
+			<a href="http://gridder.andreehansson.se/" class="tool_link"><img src="img/tool_bookmark.gif" alt="Grid Overlay Bookmark" width="300" height="40" /></a>
+		</p>
+	</div>
+	<!-- end .grid_4 -->
+	<hr />
+	<div class="grid_4">
+		<h3>
+			Essence
+		</h3>
+		<p>
+			The 960 Grid System is an effort to streamline web development workflow by providing commonly used dimensions, based on a width of 960 pixels. There are two variants: 12 and 16 columns, which can be used separately or in tandem. <a href="http://sonspring.com/journal/960-grid-system">Read more</a>.
+		</p>
+	</div>
+	<!-- end .grid_4 -->
+	<div class="grid_4">
+		<h3>
+			Dimensions
+		</h3>
+		<p>
+			The 12-column grid is divided into portions that are 60 pixels wide. The 16-column grid consists of 40 pixel increments. Each column has 10 pixels of margin on the left and right, which create 20 pixel wide gutters between columns. <a href="demo.html">View demo</a>.
+		</p>
+	</div>
+	<!-- end .grid_4 -->
+	<div class="grid_4">
+		<h3>
+			Purpose
+		</h3>
+		<p>
+			The premise of the system is ideally suited to rapid prototyping, but it would work equally well when integrated into a production environment. There are printable sketch sheets, design layouts, and a CSS file that have identical measurements.
+		</p>
+	</div>
+	<!-- end .grid_4 -->
+	<hr />
+	<div class="grid_6">
+		<h3>
+			More Columns
+		</h3>
+		<p>
+			For those more comfortable designing on a 24-column grid, an alternative version is also included. It consists of columns 30 pixels wide, with 10 pixel gutters, and a 5 pixel buffer on each side of the container. This keeps text from touching browser chrome &mdash; helpful for devices like the iPhone, where a lower-case "i" or "l" might be easily missed. <a href="demo_24_col.html">View demo</a>.
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<div class="grid_6">
+		<h3>
+			Source Order
+		</h3>
+		<p>
+			By utilizing the <em>push_XX</em> and <em>pull_XX</em> classes, elements can be rearranged, independent of the order in which they appear in the markup. This allows you to keep more pertinent info higher in the HTML, without sacrificing precision in your page layout. For instance, view the source code of this page to see how the <em>H1</em> tag has been re-positioned.
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<hr />
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://keynotekungfu.com/?ref=960">Keynote Wireframe Toolkit</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_keynote.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://drupal.org/">Drupal</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_drupal.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<hr />
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://fedoraproject.org/">Fedora Project</a> &mdash; 16 col</span>
+			<span class="example_16" style="background-image: url(img/example_fedora.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://5by5.tv/">5by5 Studios</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_5by5.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<hr />
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://interactionhero.com/">Hugh Griffith</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_hugh.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://panoetic.com/">Panoetic</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_panoetic.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<hr />
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://gantry-framework.org/">Gantry Framework</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_gantry.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://thingsthatarebrown.com/">Things That Are Brown</a> &mdash; 16 col</span>
+			<span class="example_16" style="background-image: url(img/example_brown.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<hr />
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://media.twitter.com/">Twitter Media Blog</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_twitter_media.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://refreshboston.org/">Refresh Boston</a> &mdash; 16 col</span>
+			<span class="example_16" style="background-image: url(img/example_refresh_boston.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<hr />
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://51bits.com/">51bits</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_51bits.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://onehub.com/">Onehub</a> &mdash; 16 col</span>
+			<span class="example_16" style="background-image: url(img/example_onehub.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<hr />
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://fourkitchens.com/">Four Kitchens</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_fourkitchens.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<div class="grid_6">
+		<p>
+			<span class="info"><a href="http://secondandpark.com/">Second &amp; Park</a> &mdash; 16 col</span>
+			<span class="example_16" style="background-image: url(img/example_secondandpark.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<hr />
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://tenseveninteractive.com/projects/">Ten Seven Interactive</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_tenseven.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://pixeldreams.com/">Pixel Dreams</a> &mdash; 16 col</span>
+			<span class="example_16" style="background-image: url(img/example_pixel_dreams.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<hr />
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://tapbots.com/">Tapbots</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_tapbots.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://subvert.ca/">Subvert</a> &mdash; 16 col</span>
+			<span class="example_16" style="background-image: url(img/example_subvert.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<hr />
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://modxcms.com/">MODx CMS</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_modx.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://pulseapp.com/">Pulse App</a> &mdash; 16 col</span>
+			<span class="example_16" style="background-image: url(img/example_pulseapp.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<hr />
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://philcoffman.com/work.php">Phil Coffman</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_phil.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://rightfromtheheart.org/">Right From the Heart</a> &mdash; 16 col</span>
+			<span class="example_16" style="background-image: url(img/example_rightfrom.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<hr />
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://blackestate.co.nz/">Black Estate Vineyard</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_vineyard.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://simplifiedsafety.com/">Simplified Safety</a> &mdash; 16 col</span>
+			<span class="example_16" style="background-image: url(img/example_safety.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<hr />
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://abetteroffice.com/">A Better Office</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_abetteroffice.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://woothemes.com/">WooThemes</a> &mdash; 16 col</span>
+			<span class="example_16" style="background-image: url(img/example_woothemes.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<hr />
+	<div class="grid_6">
+		<p>
+		 	<span class="info"><a href="http://qatar.vcu.edu/">VCU Qatar</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_vcu.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<div class="grid_6">
+		<p>
+			<span class="info"><a href="http://aia.org/">American Institute of Architects</a> &mdash; 12 col</span>
+			<span class="example_12" style="background-image: url(img/example_aia.jpg)">
+				&nbsp;
+			</span>
+		</p>
+	</div>
+	<!-- end .grid_6 -->
+	<hr />
+	<div class="grid_4">
+		<h3>
+			Code
+		</h3>
+		<p>
+			View comprehensive code on the <a href="demo.html">demo page</a>.
+		</p>
+		<p>
+			To the right is an example of how the code works. The container specifies how many total columns exist, either 12 or 16. For the most part, you will only ever need to specify a class name of <em>grid_XX</em>, where <em>XX</em> represents the column width.
+		</p>
+		<p>
+			If a grid unit contains grid children, the first child in a row will need a class of <em>alpha</em> and the last child in a row requires the class name <em>omega</em>. Likewise, if you want to insert empty space before or after a grid unit, use class <em>prefix_XX</em> or <em>suffix_XX</em>.
+		</p>
+	</div>
+	<!-- end .grid_4 -->
+	<div class="grid_4">
+<pre>&lt;div class="container_12"&gt;
+    &lt;div class="grid_7 prefix_1"&gt;
+        &lt;div class="grid_2 alpha"&gt;
+            ...
+        &lt;/div&gt;
+        &lt;div class="grid_3"&gt;
+            ...
+        &lt;/div&gt;
+        &lt;div class="grid_2 omega"&gt;
+            ...
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="grid_3 suffix_1"&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+	</div>
+	<!-- end .grid_4 -->
+	<div class="grid_4">
+		<h3>
+			Nine-Sixty
+		</h3>
+		<p>
+			All modern monitors support at least 1024 &times; 768 pixel resolution. 960 is divisible by 2, 3, 4, 5, 6, 8, 10, 12, 15, 16, 20, 24, 30, 32, 40, 48, 60, 64, 80, 96, 120, 160, 192, 240, 320 and 480. This makes it a highly flexible base number to work with.
+		</p>
+		<h3>
+			Credits
+		</h3>
+		<p>
+			I drew inspiration from these individuals: <a href="http://www.subtraction.com/2004/12/31/grid-computi">Khoi Vinh</a>, <a href="http://www.cameronmoll.com/archives/2006/12/gridding_the_960/">Cameron Moll</a>, <a href="http://web.archive.org/web/20071023015200/http://bjorkoy.com/past/2007/8/3/launch_blueprint_a_css_framework/">Olav Bjørkøy</a>, <a href="http://www.adaptivepath.com/ideas/essays/archives/000863.php">Brandon Schauer</a>, <a href="http://jeffcroft.com/blog/2007/nov/17/whats-not-love-about-css-frameworks/">Jeff Croft</a> and <a href="http://www.markboulton.co.uk/journal/comments/five_simple_steps_to_designing_grid_systems_part_1/">Mark Boulton</a>. Their work spurred me to create my own. Special thanks to <a href="http://meyerweb.com/eric/tools/css/reset/">Eric Meyer</a> for his comprehensive reset CSS.
+		</p>
+	</div>
+	<!-- end .grid_4 -->
+	<hr />
+	<div class="grid_4">
+		<h3>
+			Plugins
+		</h3>
+		<p>
+			In addition to design template files, there are app plugins for Photoshop and Fireworks included in the official <a href="http://github.com/nathansmith/960-Grid-System/zipball/master">download</a>. Additionally, DMXzone has created a Dreamweaver <a href="http://www.dmxzone.com/go?18032">extension</a> and <a href="http://www.dmxzone.com/index?66">templates</a>, available free to members of their site.
+		</p>
+	</div>
+	<!-- end .grid_4 -->
+	<div class="grid_4">
+		<h3>
+			Tutorials
+		</h3>
+		<p>
+			Web Designer Depot featured an <a href="http://www.webdesignerdepot.com/2010/03/fight-div-itis-and-class-itis-with-the-960-grid-system/">article</a> on writing less code by styling tags directly. Nettuts has both a <a href="http://net.tutsplus.com/tutorials/html-css-techniques/prototyping-with-the-grid-960-css-framework/">tutorial</a> and <a href="http://net.tutsplus.com/videos/screencasts/a-detailed-look-at-the-960-css-framework/">video</a>. WooThemes wrote a <a href="http://www.woothemes.com/2008/12/why-we-love-960gs/">post</a> entitled &#8220;Why we love 960.gs.&#8221; There are also articles in Spanish <a href="http://jepserbernardino.com/idea/960-grid-un-framework-para-css/">[1]</a> <a href="http://www.desarrolloweb.com/manuales/maquetacion-css-960-grid-system.html">[2]</a> and Swedish <a href="http://www.wordpressguru.se/sa-anvander-du-960-grid-system/">[1]</a> <a href="http://www.wordpressguru.se/bygg-ett-wordpress-tema-med-960-grid-system/">[2]</a>.
+		</p>
+	</div>
+	<!-- end .grid_4 -->
+	<div class="grid_4">
+		<h3>
+			Derivatives
+		</h3>
+		<p>
+			The 960 Grid System is free to use, and may be repurposed to meet your specific needs. Several projects have already spun off, including versions that were built to be <a href="http://www.designinfluences.com/fluid960gs/">fluid</a> and <a href="http://csswizardry.com/typogridphy/">elastic</a>. Additionally, it is has been adapted as a theme for <a href="http://drupal.org/project/ninesixty">Drupal</a>.
+		</p>
+	</div>
+	<!-- end .grid_4 -->
+	<hr />
+	<div class="grid_5">
+		<small>
+			<a href="http://validator.w3.org/check/referer">HTML</a> - <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> - <a href="http://www.contentquality.com/mynewtester/cynthia.exe?Url1=http://960.gs/">508</a> &mdash; 960 Grid System by <a href="http://sonspring.com/">Nathan Smith</a>.
+		</small>
+	</div>
+	<div class="grid_2 align_center">
+		<a href="http://www.firehost.com/?ref=spon_nsmith_960"><img src="img/hosted_by_firehost.png" alt="Secure Hosting" /></a>
+	</div>
+	<div class="grid_5 align_right">
+		<small>
+			Licensed under <a href="http://www.gnu.org/licenses/gpl.html" rel="license">GPL</a> and <a href="http://www.opensource.org/licenses/mit-license.php" rel="license">MIT</a>. Overlay effects via <a href="http://jquery.com/">jQuery</a>.
+		</small>
+	</div>
+	<div class="clear"></div>
+	<a href="http://twitter.com/nathansmith/" id="twitter"><img src="img/twitter.gif" alt="Follow me on Twitter" /></a>
+	<script>
+	// Fusion Ads code.
+	document.write('<scr' + 'ipt src="http://adn.fusionads.net/www/pull/get.php?zoneid=56&charset=UTF-8&withtext=1&cb=' + Math.floor(Math.random() * 99999999999) + '"></scr' + 'ipt>');
+	</script>
+	<a href="http://fusionads.net/" id="fusion_link">Ads by Fusion</a>
+</div>
+<!-- end .container_12 -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery.js"%3E%3C/script%3E'));</script>
+<script>
+// Closure.
+(function() {
+	// IE6 cannot handle PNG alpha transparency.
+	if (typeof document.addEventListener !== 'function' && !window.XMLHttpRequest) {
+		// Exit.
+		return;
+	}
+
+	// Insert grid overlay images.
+	$('span.example_12').html('<img src="img/overlay_12.png" alt="12 Column Example" />');
+	$('span.example_16').html('<img src="img/overlay_16.png" alt="16 Column Example" />');
+
+	// Create toggle links.
+	$('span.example_12, span.example_16').before('<a href="#" class="toggle">Show Grid</a>');
+
+	// Click event for toggle.
+	$('a.toggle').click(function() {
+		// Locate the overlay images.
+		var x = $(this).parents('p:first').find('img:first');
+
+		if (x.is(':hidden')) {
+			// If hidden, show.
+			$(this).html('Hide Grid').addClass('toggle_on');
+			x.fadeIn('slow');
+		}
+		else {
+			// If visible, hide.
+			$(this).html('Show Grid').removeClass('toggle_on');
+			x.fadeOut('slow');
+		}
+
+		// Nofollow.
+		this.blur();
+		return false;
+	});
+})();
+</script>
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-166674-7']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</body>
+</html>

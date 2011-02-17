@@ -1,0 +1,224 @@
+@import url(reset.css);
+/* ----------------------------------------
+   Body
+- - - - - - - - - - - - - - - - - - - - - */
+html body {
+  background-color: gray; }
+  html body #content {
+    width: 960px;
+    margin: 15px auto; }
+
+/* ----------------------------------------
+   Form
+- - - - - - - - - - - - - - - - - - - - - */
+.field label {
+  display: block;
+  float: left;
+  width: 100px; }
+.field input, .field textarea {
+  display: block; }
+
+/* ----------------------------------------
+   Links
+- - - - - - - - - - - - - - - - - - - - - */
+body a, body a:visited {
+  outline: none;
+  background: transparent;
+  color: #d7d2d2;
+  text-decoration: underline; }
+body a:hover {
+  background: transparent;
+  color: #c6c1c1; }
+
+/* ----------------------------------------
+   Hacks
+- - - - - - - - - - - - - - - - - - - - - */
+.clearfix {
+  clear: both; }
+
+/* ----------------------------------------
+   Global
+- - - - - - - - - - - - - - - - - - - - - */
+.alpha {
+  margin-left: 0; }
+
+.omega {
+  margin-right: 0; }
+
+/* ----------------------------------------
+   Icons
+- - - - - - - - - - - - - - - - - - - - - */
+.controlls div > a {
+  display: block;
+  text-indent: -9999px; }
+.controlls .add_task_form a, .controlls .task_edit, .controlls .task_finish {
+  width: 25px;
+  height: 25px; }
+.controlls .add_task_form a:hover, .controlls .add_task_form .task_edit:hover, .controlls .add_task_form .task_finish:hover, .controlls div a:hover, .controlls div .task_edit:hover, .controlls div .task_finish:hover {
+  background-position: left -25px; }
+.controlls .add_task_form a:active, .controlls .add_task_form .task_edit:active, .controlls .add_task_form .task_finish:active, .controlls div a:active, .controlls div .task_edit:active, .controlls div .task_finish:active {
+  background-position: left -50px; }
+.controlls .add_task_form a {
+  background: url(../images/add_task.gif) no-repeat; }
+.controlls .more_tasks_form a, .controlls .less_tasks_form a {
+  width: 22px;
+  height: 22px;
+  background: url(../images/more.png) no-repeat; }
+.controlls .more_tasks_form a:hover, .controlls .less_tasks_form a:hover {
+  background-position: left -22px; }
+.controlls .more_tasks_form a:active, .controlls .less_tasks_form a:active {
+  background-position: left -44px; }
+.controlls .less_tasks_form a {
+  background: url(../images/less.png) no-repeat; }
+.controlls .task_form .task_edit {
+  background: url(../images/edit_task.gif) no-repeat; }
+.controlls .task_form .task_finish {
+  background: url(../images/finish_task.gif) no-repeat; }
+
+/* ----------------------------------------
+   Tasks Manager
+- - - - - - - - - - - - - - - - - - - - - */
+.separator {
+  float: left;
+  width: 2px;
+  height: 236px;
+  margin: -1em 0 -1em -3px;
+  padding: 0;
+  background: url(../images/separator.png) top left no-repeat; }
+
+.separator:nth-child(8n) {
+  display: none; }
+
+.person {
+  position: relative;
+  margin: 3em 0 15px -20px;
+  padding: 1em;
+  background-color: #d7d2d2;
+  -moz-border-radius: 5px;
+  /* Firefox */
+  -webkit-border-radius: 5px;
+  /* Safari, Chrome */
+  border-radius: 5px;
+  /* CSS3 */ }
+  .person .controlls {
+    position: absolute;
+    left: 0;
+    width: 100%; }
+    .person .controlls .add_task_form {
+      position: absolute;
+      right: 1em;
+      visibility: hidden; }
+    .person .controlls .more_tasks_form {
+      position: absolute;
+      right: -11px;
+      top: 100px; }
+    .person .controlls .less_tasks_form {
+      position: absolute;
+      right: -11px;
+      top: 100px; }
+  .person .details {
+    position: relative;
+    float: left;
+    margin-right: 7px; }
+    .person .details .name {
+      position: absolute;
+      width: 954px;
+      top: -2.5em;
+      text-indent: 1em;
+      color: #d7d2d2; }
+      .person .details .name a {
+        color: #d7d2d2; }
+    .person .details .person_img img {
+      width: 140px;
+      height: 210px; }
+    .person .details .controlls {
+      position: absolute;
+      width: 954px;
+      top: -2.5em;
+      text-align: right; }
+      .person .details .controlls a {
+        color: #d7d2d2;
+        text-decoration: none; }
+      .person .details .controlls a:hover {
+        text-decoration: underline; }
+  .person .tasks {
+    float: left;
+    width: 807px; }
+    .person .tasks .task {
+      position: relative;
+      float: left;
+      width: 185px;
+      margin: 0 6px;
+      height: 210px; }
+      .person .tasks .task .date {
+        margin: 0 0 1.2em; }
+      .person .tasks .task .controlls {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden; }
+        .person .tasks .task .controlls .task_edit, .person .tasks .task .controlls .task_finish {
+          position: absolute;
+          top: 0; }
+        .person .tasks .task .controlls .task_edit {
+          right: 10px; }
+        .person .tasks .task .controlls .task_finish {
+          right: 41px; }
+    .person .tasks .task:hover .controlls {
+      visibility: visible; }
+
+.person:hover .controlls .add_task_form {
+  visibility: visible; }
+
+/*
+.person {
+  clear: both;
+  margin: 0 0 90px -20px;
+  padding: 0 0 0 20px;
+  background: $minor_color;
+  
+  .controlls, .details, .details .person_img {
+    padding: 10px 0 ;
+  }
+
+  .controlls {
+    float: left;
+    height: 200px;
+    width: 20px;
+
+    .add_task_form {
+      a { display: block; height: 100%; width: 100%;  }
+    }
+  }
+
+  .details, .tasks, .task {
+    display: inline;
+    float: left;
+  }
+
+  .details {
+    width: $details_width;
+    margin: -25px 0;
+    padding: 10px $space;
+    background: grey;
+    text-align: center;
+  }
+
+  .tasks {
+    width: $task_width*$visible_tasks + $space*$visible_tasks*2; 
+    min-height: 210px;
+    padding: 10px 0;
+    background: $major_color;
+    .task {
+      width: $task_width - $space / $visible_tasks;
+      margin: $space;
+    }
+  }
+
+  .task_controller {
+    a {
+      display: block;
+    }
+  }
+}
+*/

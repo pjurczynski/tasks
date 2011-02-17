@@ -1,0 +1,345 @@
+// Meyer's reset
+@import "reset.css";
+
+
+// ----------------------------------------
+// Variables
+// - - - - - - - - - - - - - - - - - - - - 
+$content_width: 960px;
+$task_width: 185px;
+$white_space: 6px;
+$details_width: 200px;
+$visible_tasks: 3;
+$dark_grey: #808080;
+$light_grey: #d7d2d2;
+$accent_color: #c33;
+$photo_width: 140px;
+$photo_height: 210px;
+$font_normal_size: 13px;
+$task_hover: -25px;
+$task_normal: 0;
+$task_active: -50px;
+$more_hover: -22px;
+$more_normal: 0;
+$more_active: -44px;
+$corner: 5px;
+// ----------------------------------------
+// mixins
+// - - - - - - - - - - - - - - - - - - - - 
+@mixin debug {
+  background-color: red;
+}
+
+@mixin round_corners( $rad ) {
+  -moz-border-radius: $rad; /* Firefox */
+  -webkit-border-radius: $rad; /* Safari, Chrome */
+  border-radius: $rad; /* CSS3 */
+}
+/* ----------------------------------------
+   Body
+- - - - - - - - - - - - - - - - - - - - - */
+html {
+
+  body {
+    background-color: $dark_grey;
+    
+    #content {
+      width: $content_width;
+      margin: 15px auto;
+    }
+  }
+}
+
+/* ----------------------------------------
+   Form
+- - - - - - - - - - - - - - - - - - - - - */
+.field {
+  label {
+    display: block;
+    float: left;
+    width: 100px;
+  }
+
+  input, textarea {
+    display: block;
+
+  }
+
+}
+
+/* ----------------------------------------
+   Links
+- - - - - - - - - - - - - - - - - - - - - */
+body {
+  a, a:visited {
+    outline: none;
+    background: transparent;
+    color: $light_grey;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    background: transparent;
+    color: ($light_grey - #111 );
+  }
+}
+/* ----------------------------------------
+   Hacks
+- - - - - - - - - - - - - - - - - - - - - */
+.clearfix { clear: both }
+
+/* ----------------------------------------
+   Global
+- - - - - - - - - - - - - - - - - - - - - */
+.alpha { margin-left: 0 }
+.omega { margin-right: 0 }
+
+/* ----------------------------------------
+   Icons
+- - - - - - - - - - - - - - - - - - - - - */
+.controlls {
+  div>a {
+      display: block;
+      text-indent: -9999px;
+  }
+
+  .add_task_form a, .task_edit, .task_finish {
+    width: 25px;
+    height: 25px;
+  }
+  .add_task_form, div {
+
+    a:hover, .task_edit:hover, .task_finish:hover {
+      background-position: left $task_hover;
+    }
+    a:active, .task_edit:active, .task_finish:active {
+      background-position: left $task_active;
+    }
+  }
+
+  .add_task_form {
+
+    a {
+      background: url(../images/add_task.gif) no-repeat;
+    }
+
+  }
+
+  .more_tasks_form, .less_tasks_form {
+    a {
+      width: 22px;
+      height: 22px;
+      background: url(../images/more.png) no-repeat;
+    }
+
+    a:hover {
+      background-position: left $more_hover;
+    }
+
+    a:active {
+      background-position: left $more_active;
+    }
+  }
+
+  .less_tasks_form {
+    a {
+      background: url(../images/less.png) no-repeat;
+    }
+  }
+
+  .task_form {
+    .task_edit {
+      background: url(../images/edit_task.gif) no-repeat;
+    }
+
+    .task_finish {
+      background: url(../images/finish_task.gif) no-repeat;
+    }
+  }
+}
+
+/* ----------------------------------------
+   Tasks Manager
+- - - - - - - - - - - - - - - - - - - - - */
+.separator {
+  float: left;
+  width: 2px;
+  height: 236px;
+  margin: -1em 0 -1em -3px; 
+  padding: 0;
+  background: url(../images/separator.png) top left no-repeat ;
+}
+
+.separator:nth-child(8n) {
+  display: none;
+}
+
+.person {
+  position: relative;
+  margin: 3em 0 15px -20px;
+  padding: 1em;
+  background-color: $light_grey;
+  @include round_corners($corner);
+
+  .controlls {
+    position: absolute;
+    left: 0;
+    width: 100%;
+
+    .add_task_form {
+      position: absolute;
+      right: 1em;
+      visibility: hidden;
+    }
+
+    .more_tasks_form {
+      position: absolute;
+      right: -11px;
+      top: 100px;
+    }
+
+    .less_tasks_form {
+      position: absolute;
+      right: -11px;
+      top: 100px;
+    }
+  }
+  
+  .details {
+    position: relative;
+    float: left;
+    margin-right: 7px;
+
+    .name { 
+      position: absolute;
+      width: 954px;
+      top: -2.5em;
+      text-indent: 1em;
+      color: $light_grey;
+
+      a { color: $light_grey; }
+    }
+
+    .person_img {
+      img {
+        width: $photo_width;
+        height: $photo_height;
+      }
+    }
+
+    .controlls {
+      position: absolute;
+      width: 954px;
+      top: -2.5em;
+      text-align: right;
+
+      a { 
+        color: $light_grey; 
+        text-decoration: none
+      }
+
+      a:hover {
+        text-decoration: underline
+      }
+    }
+  }
+
+  .tasks {
+    float: left;
+    width: 807px;
+
+    .task {
+      position: relative;
+      float: left;
+      width: $task_width;
+      margin: 0 $white_space;
+      height: $photo_height;
+
+      .date {
+        margin: 0 0 1.2em;
+      }
+
+      .controlls {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+
+        .task_edit, .task_finish {
+          position: absolute;
+          top: 0;
+        }
+        .task_edit {
+          right: 10px;
+
+        }
+
+        .task_finish {
+          right: (35px + $white_space);
+        }
+      }
+    }
+    .task:hover .controlls {
+      visibility: visible;
+    }
+  }
+}
+
+.person:hover .controlls .add_task_form {
+  visibility: visible;
+}
+  
+
+
+/*
+.person {
+  clear: both;
+  margin: 0 0 90px -20px;
+  padding: 0 0 0 20px;
+  background: $minor_color;
+  
+  .controlls, .details, .details .person_img {
+    padding: 10px 0 ;
+  }
+
+  .controlls {
+    float: left;
+    height: 200px;
+    width: 20px;
+
+    .add_task_form {
+      a { display: block; height: 100%; width: 100%;  }
+    }
+  }
+
+  .details, .tasks, .task {
+    display: inline;
+    float: left;
+  }
+
+  .details {
+    width: $details_width;
+    margin: -25px 0;
+    padding: 10px $space;
+    background: grey;
+    text-align: center;
+  }
+
+  .tasks {
+    width: $task_width*$visible_tasks + $space*$visible_tasks*2; 
+    min-height: 210px;
+    padding: 10px 0;
+    background: $major_color;
+    .task {
+      width: $task_width - $space / $visible_tasks;
+      margin: $space;
+    }
+  }
+
+  .task_controller {
+    a {
+      display: block;
+    }
+  }
+}
+*/

@@ -1,0 +1,4 @@
+.task_controller
+  - pages = person.tasks.count/3 -1
+  - pages.times do |page|
+    = link_to "więcej", :anchor => person.id.to_s + '_' + ((page + 2)*3).to_s

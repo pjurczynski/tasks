@@ -1,0 +1,5 @@
+.task_form
+  - task_id = edit_task_form.id
+  = link_to "Edytuj", edit_task_manager_path(task_id), :class => "task_edit"
+  = link_to "Zakoncz", finish_task_manager_path(task_id), :method => :put, :class => "task_finish"
+  /= link_to "Usuń", task_manager_path(task_id), :method => :delete
