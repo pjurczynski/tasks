@@ -49,9 +49,8 @@
 
     respond_to do |format|
       if @person.save
-        format.html { redirect_to(task_manager_index_path, :notice => 'Osoba zostala dodana') }
+        format.html { redirect_to(task_manager_index_path, :notice => 'Osoba zostaa dodana') }
         format.xml  { render :xml => @person, :status => :created, :location => @person }
-        
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @person.errors, :status => :unprocessable_entity }
