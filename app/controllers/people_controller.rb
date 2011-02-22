@@ -49,7 +49,7 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.save
-        format.html { redirect_to(task_manager_index_path, :notice => 'Osoba została dodana') }
+        format.html { redirect_to(task_manager_index_path, :notice => 'Osoba zostala dodana') }
         format.xml  { render :xml => @person, :status => :created, :location => @person }
       else
         format.html { render :action => "new" }
